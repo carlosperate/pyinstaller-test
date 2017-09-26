@@ -13,7 +13,7 @@ pyqt_dlls =  os.path.join(pyqt_dir, 'plugins', 'platforms')
 
 # Add qt.conf to indicate where PyInstaller placed dlls
 data_files = []
-data_files += [('qt.conf', os.path.join('PyQt5', 'Qt', 'bin'))]
+data_files += [('qt.conf', '.')]
 binary_files = []
 #binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), 'platforms')]
 #binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), os.path.join('plugins', 'platforms'))]
