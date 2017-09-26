@@ -90,4 +90,4 @@ deploy:
   set_public: true
   folder: pyinstaller
   on:
-    branch: [master, copy_dlls]
+    branch: [master, copy_dlls, qt_conf]

@@ -12,20 +12,21 @@ pyqt_dir = os.path.dirname(getfile(PyQt5))
 pyqt_dlls =  os.path.join(pyqt_dir, 'plugins', 'platforms')
 
 # Add qt.conf to indicate where PyInstaller placed dlls
-#data_files += [('qt.conf', '.')]
+data_files = []
+data_files += [('qt.conf', os.path.join('PyQt5', 'Qt', 'bin'))]
 binary_files = []
 #binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), 'platforms')]
-binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), os.path.join('plugins', 'platforms'))]
+#binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), os.path.join('plugins', 'platforms'))]
 #binary_files += [(os.path.join(pyqt_dlls, 'qoffscreen.dll'), 'platforms')]
-binary_files += [(os.path.join(pyqt_dlls, 'qoffscreen.dll'), os.path.join('plugins', 'platforms'))]
+#binary_files += [(os.path.join(pyqt_dlls, 'qoffscreen.dll'), os.path.join('plugins', 'platforms'))]
 #binary_files += [(os.path.join(pyqt_dlls, 'qminimal.dll'), 'platforms')]
-binary_files += [(os.path.join(pyqt_dlls, 'qminimal.dll'), os.path.join('plugins', 'platforms'))]
+#binary_files += [(os.path.join(pyqt_dlls, 'qminimal.dll'), os.path.join('plugins', 'platforms'))]
 
 
 a = Analysis(['../pyqt5_test.py'],
              pathex=['../', pyqt_dir, pyqt_dlls],
              binaries=binary_files,
-             datas=[],
+             datas=data_files,
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
