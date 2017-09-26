@@ -15,11 +15,11 @@ pyqt_dlls =  os.path.join(pyqt_dir, 'plugins', 'platforms')
 #data_files += [('qt.conf', '.')]
 binary_files = []
 binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), 'platforms')]
-binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), os.path.join('plugins', 'platforms'))]
+#binary_files += [(os.path.join(pyqt_dlls, 'qwindows.dll'), os.path.join('plugins', 'platforms'))]
 binary_files += [(os.path.join(pyqt_dlls, 'qoffscreen.dll'), 'platforms')]
-binary_files += [(os.path.join(pyqt_dlls, 'qoffscreen.dll'), os.path.join('plugins', 'platforms'))]
+#binary_files += [(os.path.join(pyqt_dlls, 'qoffscreen.dll'), os.path.join('plugins', 'platforms'))]
 binary_files += [(os.path.join(pyqt_dlls, 'qminimal.dll'), 'platforms')]
-binary_files += [(os.path.join(pyqt_dlls, 'qminimal.dll'), os.path.join('plugins', 'platforms'))]
+#binary_files += [(os.path.join(pyqt_dlls, 'qminimal.dll'), os.path.join('plugins', 'platforms'))]
 
 
 a = Analysis(['../pyqt5_test.py'],
